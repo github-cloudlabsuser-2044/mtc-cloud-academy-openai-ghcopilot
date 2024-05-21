@@ -80,14 +80,38 @@ Para poder ejecutar la demo es necesario seguir los siguientes pasos:
 
 Dentro del escenario tenemos un Bot intelligente que usara Azure OpenAI para agregar inteligencia articial generativa, este Bot se podra integrar con microsoft teams y con un portal web.  
 
+### Habilitacion de Azure Open AI , Servicios de busqueda y Storage Account en Azure
+
+En esta sección vamos a habilitar los servicios de Azure necesarios para el desarrollo de la solución. Para esto es necesario seguir los siguiente pasos:
+
+#### Creación de Grupo de Recursos
+
+1. En el ambiente de Azure proporcionado por el instructor o en tu suscripción, vamos a la sección de "Resource Groups" y creamos un grupo de recursos. ![alt text](images/image-a4.png)
+2. Especificamos el nombre (podemos usar el siguiente formato "rg-dev-"iniciales"+"-aoaighcopilotws"y la región y damos clic en "Review + Create" ![alt text](images/image-a5.png)
+
+#### Creación de Azure Storage Account
+
+#### Creación de Azure Cognitive Search
+
+#### Creación de Azure Open AI
+
+#### Creación del Despliegue de ChatGPT
+
+#### Trae tus datps a Azure OpenAI
+
+### Creación de Azure Bot Service
+
 ### Construcción del Bot
+
 Una vez abierto nuestro codespace en el navegador, en esta seccion necesitamos platicar de las siguientes funcionlidades de GH Copilot: 
+
 - Mostramos que es muy facil integrarlo en nuestro ide (Visual Studio Code):
   1. Vamos al pane lateral izquierdo y damos clic en el menu de extensiones ó con el shortcut de "Ctrl+Shift+X" ![alt text](images/image-5.png)
   2. En la barra de Busqueda buscamos "GitHub Copilot", y comentamos que tenemos disponible la ayuda disponible inline con GH Copilot y con un asistente Virtual con Github Copilot y esta al alcance de un clic en el boton instalar. ![alt text](images/image-6.png)
 - Una vez explicado lo anterior vamos al panel lateral izquierdo y le damos clic en el menu de "Chat"; ahí explicamos que tenemos una interfaz conversacional donde podemos poner nuestros promts. ![alt text](images/image-7.png)
 
-Una vez explicado esto procedemos a construir nuestro bot: 
+Una vez explicado esto procedemos a construir nuestro bot:
+
 1. En el asistente de GH Copilot escribimos el siguiente prompt: "Como desarrollador, necesito crear una aplicacion web de tipo bot en .Net Core llamada BuceoBot, donde utilice el template de EchoBot del Bot Framework de Microsoft". Si la Respuesta es similar a la siguiente imagen le damos clic en boton de thums up para indicar que lo que nos recomendo fue acertado (con eso le indicamos a GH Copilot que nos dio una respuesta correcta y en futuras interacciones no dará respuestas mas adecuadas). ![alt text](images/image-8.png)
 2. Es importante recalcar que la estructura del prompt anterior es del tipo "Zero Prompt", sin embargo al usar tecnicas como especificar cual es nuestro rol, expresar una acción y detallar un contexto nos permite tener respuestas mas certeras para usarlas en el desarrollo de nuestra solución. Ahora necesitamos aplicar lo que nos recomienda. Para esto vamos a instalar las platillas , abrimos una terminal en el codespace de la siguiente forma: Menu Contextual -> Terminal -> New Terminal ![alt text](images/image-9.png)
 3. Posteriomente posicionamos el curson en la primera recomendación y seleccionamos la opcion de "Insert in Terminal", ejecutamos el comando. ![alt text](images/image99.png)
