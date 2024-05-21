@@ -84,16 +84,33 @@ Dentro del escenario tenemos un Bot intelligente que usara Azure OpenAI para agr
 
 En esta sección vamos a habilitar los servicios de Azure necesarios para el desarrollo de la solución. Para esto es necesario seguir los siguiente pasos:
 
-#### Creación de Grupo de Recursos
+#### A. Creación de Grupo de Recursos
+
+El grupo de recursos es el contenedore que agrupa los recursos de Azure, en este caso vamos a crear un grupo de recursos para organizar los recursos que vamos a crear.
 
 1. En el ambiente de Azure proporcionado por el instructor o en tu suscripción, vamos a la sección de "Resource Groups" y creamos un grupo de recursos. ![alt text](images/image-a4.png)
-2. Especificamos el nombre (podemos usar el siguiente formato "rg-dev-"iniciales"+"-aoaighcopilotws"y la región y damos clic en "Review + Create" ![alt text](images/image-a5.png)
+2. Especificamos el nombre (podemos usar el siguiente formato "rg-dev-"iniciales"+"-aoaighcopilotws"y la región y damos clic en "Review + Create". ![alt text](images/image-a5.png)
 
-#### Creación de Azure Storage Account
+#### B. Creación de Azure Storage Account
 
-#### Creación de Azure Cognitive Search
+El Storage Account de Azure es un servicio de almacenamiento en la nube seguro y altamente disponible que facilita el almacenamiento de datos estructurados y no estructurados en la nube. En nuestro escenario nos permitirá almacenar los archivos que queremos que use Azure OpenAI para darnos respuestas inteligentes a traves de nuestro Bot. Para crear una cuenta de almacenamiento en Azure, sigue estos pasos:
 
-#### Creación de Azure Open AI
+1. En portal de Azure, vamos al grupo que recien creamos, damos clic en "Create", buscamos la sección de "Storage accounts" y creamos una cuenta de almacenamiento. ![alt text](images/image-a6.png)
+2. Especificamos el nombre de la cuenta de almacenamiento (podemos usar el siguiente formato "sadev"+"iniciales"+"aoaighcopilotws", seleccionamos "Standard" en Performance y la región. damos clic en "Review + Create" y posteriormente en el botón de "Create". ![alt text](images/image-a7.png) ![alt text](images/image-a8.png)
+
+#### C. Creación de Azure Cognitive Search
+
+Azure Cognitive Search es un servicio de búsqueda en la nube completamente administrado que proporciona la capacidad de agregar una búsqueda enriquecida a las aplicaciones web y móviles. En nuestro escenario nos permitirá buscar información en los archivos que almacenamos en el Storage Account y proporcionar un mecanismo efectivo de busqueda a Azure OpenAI. Para crear un servicio de búsqueda en Azure, sigue estos pasos:
+
+1. En el portal de Azure, vamos al grupo de recursos que creamos, damos clic en "Create", buscamos la sección de "Azure AI Search" y creamos un servicio de búsqueda. ![alt text](images/image-a9.png)
+2. Especificamos el nombre del servicio de búsqueda (podemos usar el siguiente formato "aais-dev-"+"iniciales"+"-aoaighcopilotws", seleccionamos la región, y el pricing tier (Standard funciona bien para nuestro escenario) y damos clic en "Review + Create"; posteriormente en el botón de "Create". ![alt text](images/image-a10.png) ![alt text](images/image-a11.png)
+
+#### D. Creación de Azure Open AI
+
+Azure OpenAI es un servicio de inteligencia artificial generativa que permite a los desarrolladores crear aplicaciones inteligentes que pueden generar texto de forma natural y conversar con los usuarios de manera efectiva. En nuestro escenario nos permitirá agregar inteligencia a nuestro Bot para responder preguntas de forma inteligente. Para crear un servicio de Azure OpenAI, sigue estos pasos:
+
+1. En el portal de Azure, vamos al grupo de recursos que creamos, damos clic en "Create", buscamos la sección de "Azure OpenAI" y creamos un servicio de Azure OpenAI. ![alt text](images/image-a12.png)
+2. Especificamos el nombre del servicio de Azure OpenAI (podemos usar el siguiente formato "aoai-dev-"+"iniciales"+"-aoaighcopilotws", seleccionamos la región, y el pricing tier (S0 funciona bien para nuestro escenario) y damos clic en "Next" hasta llegar a la sección de "Review + submit"; posteriormente en el botón de "Create". ![alt text](images/image-a13.png) ![alt text](images/image-a14.png)
 
 #### Creación del Despliegue de ChatGPT
 
