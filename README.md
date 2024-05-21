@@ -114,9 +114,42 @@ Azure OpenAI es un servicio de inteligencia artificial generativa que permite a 
 
 #### Creación del Despliegue de ChatGPT
 
-#### Trae tus datps a Azure OpenAI
+Los Despliegues proveen endpoints a los modelos base de Azure OpenAI, en especial buscamos configurar el modelo de LLM (Large Language Model) que usaremos para hacer nuestro Bot Inteligete. En esta sección vamos a crear un despliegue de ChatGPT en Azure OpenAI, para esto es necesario seguir los siguientes pasos:
+
+1. En el portal de Azure, vamos al servicio de Azure OpenAI que creamos, en la sección de "Deployments" damos clic en "Create Deployment". ![alt text](images/image-a15.png)
+2. Damos clic en "Manage Deployments" para poder acceder a la consola de Azure OpenAI Studio ![alt text](images/image-a16.png)
+3. Damos clic en "Create New Deployment" ![alt text](images/image-a17.png)
+4. Especificamos el nombre del despliegue, podemos usar el siguiente formato "gpt-35-turbo", Importante  seleccionamos el modelo "gpt-35-turbo", modelo a escoger es el 0301; damos clic en "Create". ![alt text](images/image-a29.png)
+
+#### Trae tus datos a Azure OpenAI
+
+Para poder usar Azure OpenAI necesitamos traer nuestros datos a Azure OpenAI, en este caso vamos a especificar en el deployment que acabamos de configurar de donde obtendra los datos con lo que nos ayudará de un archivo de texto que contiene información sobre Buceo. Para traer los datos a Azure OpenAI, sigue estos pasos:
+
+1. En el portal de Azure, vamos al servicio de Azure OpenAI que creamos, en la sección de "Deployments", seleccionamos el Deployment que creamos y damos clic en "Open in Playground". ![alt text](images/image-a19.png)
+2. Ahora vemos el Playground de Azure OpenAI, podemos ver que si interactuamos con el modelo de ChatGPT, nos da respuestas inteligentes, pero provenientes de su base de conocimiento publica. ![alt text](images/image-a20.png)
+3. Por lo que si queremos acotarlo a que responda con datos de una fuente especifica nesitamos indicarselo al deployment. para esto en el panel lateral izquierdo le damos clic en "Add your Data" -> "Add a data source" ![alt text](images/image-a21.png)
+4. Seleccionamos los siguientes datos y damos clic en "Next":
+   - Data source:  Upload files
+   - Suscripción de Azure
+   - Azure Blob Storage
+   - Puede que nos pida permisos para acceder a la cuenta de almacenamiento, damos clic en "Turn on CORS"
+   - Azure AI Search
+   - nombre del indice: contentindex
+   ![alt text](images/image-a22.png)
+5. Posteriormente nos solicita subir un archivo, damos clic en "Upload files" y seleccionamos el cualquier archivo que se encuentre en la carpeta "dataFiles" de nuestro repositorio y damos clic en "Upload files". ![alt text](images/image-a23.png)
+6. Una vez que se subio el archivo, damos clic en "Next" ![alt text](images/image-a24.png)
+7. En la siguiente pantalla nos solicita que indiquemos el tipo de Busqueda, solo esta disponible la opción "Keyword", posteriormente seleccionamos el tamaño del Chunk; dejamos la opción por defecto.Damos clic en "Next" ![alt text](images/image-a25.png)
+8. Nos muestra un resumen de la configuración, damos clic en el botón de "Save and close" ![alt text](images/image-a26.png)
+9. Ahora podemos ver que esta ejecutandose el proceso de ingestion e indexación, esperamos a que terminen ambos procesos ![alt text](images/image-a27.png)
+10. Una vez que termino el proceso de ingestion e indexación, podemos ver que el modelo de ChatGPT ya esta listo para responder con la información que se encuentra en el archivo que subimos. ![alt text](images/image-a28.png).![alt text](image.png)
 
 ### Creación de Azure Bot Service
+
+Azure Bot Service es un servicio de Azure que permite a los desarrolladores crear, conectar y administrar bots inteligentes que interactúan con los usuarios a través de canales populares como Microsoft Teams, Slack, Facebook Messenger, y otros. En nuestro escenario vamos a crear un Bot Service para alojar nuestro Bot inteligente que usará Azure OpenAI para responder preguntas de forma inteligente. Para crear un Azure Bot Service, sigue estos pasos:
+
+1. En el portal de Azure, necesitamos crear primero el app service plan donde vamos a alojar el nuestro bot; para esto vamos al grupo de recursos que creamos, damos clic en "Create", buscamos la sección de "App Service Plan" y le damos clic en "Create". ![alt text](images/image-a30.png)
+2. Especificamos el nombre del App Service Plan (podemos usar el siguiente formato "asp-dev-"+"iniciales"+"-aoaighcopilotws"), especificamos como sistema operativo Linux, seleccionamos la región, el pricing tier (S1 funciona bien para nuestro escenario) y damos clic en "Review + Create"; posteriormente en el botón de "Create". ![alt text](images/image-a31.png) ![alt text](images/image-a32.png)
+3. Una vez que se creo el App Service Plan, vamos al grupo de recursos que creamos, damos clic en "Create", buscamos la sección de "Web App Bot" y creamos un Bot Service. ![alt text](images/image-a33.png)
 
 ### Construcción del Bot
 
