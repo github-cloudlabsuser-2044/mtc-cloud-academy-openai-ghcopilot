@@ -1,0 +1,33 @@
+name: Deploy to Azure Bot Service
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+
+        - name: Setup .NET Core
+          uses: actions/setup-dotnet@v1
+          with:
+            dotnet-version: '6.x'
+
+        - name: Build and publish
+          run: |
+            cd BuceoBot
+            dotnet restore
+            dotnet build --configuration Release
+            dotnet publish --configuration Release --output ./output
+
+        - name: Deploy to Azure Web App
+          uses: azure/webapps-deploy@v2
+          with:
+            app-name: 'buceobotappserv'
+            slot-name: 'production'
+            publish-profile: ${{ secrets.AzureAppService_PublishProfile }}
+            package: './BuceoBot/output'
