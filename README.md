@@ -66,13 +66,15 @@ Para poder ejecutar la demo es necesario seguir los siguientes pasos:
 
 1. Contar con una suscripción de Azure, si no cuentas con una puedes crear una cuenta gratuita en [Azure](https://azure.microsoft.com/es-es/free/). Para el taller contamos con un ambiente de Azure proporcionado por el instructor, el les hara llegar un correo con las instrucciones para acceder al ambiente (Es necesario registrarse en la liga que esta en el correo, ingresar el codigo y posteriormente dar clic en el botón "Launch Lab").
 
-2. Vamos al repositorio (https://github.com/demoedrmmsft/ghcopilotdemo)
-3. Crear una rama en el repositorio, siguiendo los siguientes paso:
+2. Vamos al repositorio (https://github.com/demoedrmmsft/mtc-cloud-academy-openai-ghcopilot) y le damos clic en el botón de "Fork" ![alt text](images/image-a1.png)
+3. Posteriormente le damos clic en "Create A new fork" ![alt text](images/image-a2.png) 
+4. Especificamos el nombre del Repositorio (Podemos dejar el mismo nombre) y damos clic en "Create Fork" ![alt text](images/image-a3.png)
+5. Crear una rama en el repositorio, siguiendo los siguientes paso:
    - a. Vamos a la sección de codigo, poseriormente en el menu de ramas damos clic ![alt text](images/image-1.png)
    - b. Especificamos el nombre de la rama (recomendable demo-"tualias") y del damos clic en Create branch demo-"tualias" from main ![alt text](images/image-2.png)
    - c. Una vez que estas en la rama recien creada le damos clic en "Code" -> En la sección de Codespaces le damos clic en el botón de "+" ![alt text](images/image-3.png)
-3. Puede que intente abrir con Visual Studio code si lo tienes habilitado, si no puedes usar el navegador web. En caso que no visualizar el codespace, en nuestra rama, damos clic al botón de "Code" -> Damos clien en las elipses del codespace de nuestra rama y posteriormente en la opción de "Open in Browser" ![alt text](images/image-4.png) 
-4. Estas listo para seguir la guía y dar una excelente demostración a tu cliente
+6. Puede que intente abrir con Visual Studio code si lo tienes habilitado, si no puedes usar el navegador web. En caso que no visualizar el codespace, en nuestra rama, damos clic al botón de "Code" -> Damos clien en las elipses del codespace de nuestra rama y posteriormente en la opción de "Open in Browser" ![alt text](images/image-4.png)
+7. Estas listo para seguir la guía y crear un bot inteligente que usa Azure Open AI .
 
 ## Paso a paso
 
