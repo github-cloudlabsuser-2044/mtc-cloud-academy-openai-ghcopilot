@@ -19,7 +19,7 @@ jobs:
 
         - name: Build and publish
           run: |
-            cd ${{secrets.PROJECT_NAME}}
+            cd webapp-dev-gedrm-aoaighcopilotws
             dotnet restore
             dotnet build --configuration Release
             dotnet publish --configuration Release --output ./output
@@ -27,6 +27,6 @@ jobs:
         - name: Deploy to Azure Web App
           uses: azure/webapps-deploy@v2
           with:
-            app-name: '${{secrets.PROJECT_NAME}}'
+            app-name: 'webapp-dev-gedrm-aoaighcopilotws'
             publish-profile: ${{ secrets.AzureAppService_PublishProfile }}
-            package: './${{secrets.PROJECT_NAME}}/output'
+            package: './webapp-dev-gedrm-aoaighcopilotws/output'
