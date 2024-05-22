@@ -8,6 +8,11 @@ Cada sección tiene como objetivo principal mostrar una o varias característica
 
 Lo ideal es crear un Fork de este repositorio y utilizar el ambiente de Azure proporcionado en la sesión.
 
+
+A continuación se muestra el contenido de la guía recomendada del workshop:
+
+[[toc]]
+
 ## Escenarios de Negocio aplicables
 
 Los bots inteligentes que utilizan Azure Open AI y Azure Bot pueden ser implementados en una variedad de escenarios de negocio para mejorar la eficiencia, proporcionar soporte al cliente y optimizar operaciones. Aquí algunos ejemplos de cómo podrías usar un bot inteligente en diferentes industrias:
@@ -47,17 +52,6 @@ En la guía estamos planteando un bot relacionado con Buceo, pero es recomendabl
 
 Buscamos habilitar el siguiente escenario técnico:
 "aquí va la imagen"
-
-A continuación se muestra el contenido de la guía recomendada dela Demo
-
-
-- [Demo Rapida de GitHub Copilot](#demo-rapida-de-github-copilot)
-  - [Escenarios de Negocio aplicables](#escenarios-de-negocio-aplicables)
-  - [Prerequisitos](#prerequisitos)
-  - [Paso a paso](#paso-a-paso)
-    - [Construcción del Bot](#construcción-del-bot)
-    - [Adición de inteligencia artificial generativa usando el SDK del  Azure Open AI](#adición-de-inteligencia-artificial-generativa-usando-el-sdk-del--azure-open-ai)
-    - [Integración del bot con Microsoft Teams](#integración-del-bot-con-microsoft-teams)
 
 
 ## Prerequisitos
