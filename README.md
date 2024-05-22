@@ -149,7 +149,18 @@ Azure Bot Service es un servicio de Azure que permite a los desarrolladores crea
 
 1. En el portal de Azure, necesitamos crear primero el app service plan donde vamos a alojar el nuestro bot; para esto vamos al grupo de recursos que creamos, damos clic en "Create", buscamos la sección de "App Service Plan" y le damos clic en "Create". ![alt text](images/image-a30.png)
 2. Especificamos el nombre del App Service Plan (podemos usar el siguiente formato "asp-dev-"+"iniciales"+"-aoaighcopilotws"), especificamos como sistema operativo Linux, seleccionamos la región, el pricing tier (S1 funciona bien para nuestro escenario) y damos clic en "Review + Create"; posteriormente en el botón de "Create". ![alt text](images/image-a31.png) ![alt text](images/image-a32.png)
-3. Una vez que se creo el App Service Plan, vamos al grupo de recursos que creamos, damos clic en "Create", buscamos la sección de "Web App Bot" y creamos un Bot Service. ![alt text](images/image-a33.png)
+3. Una vez que se creo el App Service Plan necesitamos crear un web app, vamos al grupo de recursos que creamos, damos clic en "Create", buscamos la sección de "Web App" y creamos le damos clic en "Create un Bot Service. ![alt text](images/image-a33.png)
+4. Especificamos el nombre del Web App (podemos usar el siguiente formato "webapp-dev-"+"iniciales"+"-aoaighcopilotws"), seleccionamos el tipo de publish = "Code", el Runtime Stack = ".NET 6 (LTS), Sistema operativo = "Linux",  el App Service Plan que creamos, la región, y damos clic en "Review + Create"; posteriormente en el botón de "Create". ![alt text](images/image-a34.png) ![alt text](images/image-a35.png)
+5. Una vez que se creo el Web App, necesitamos crear un Bot Service, vamos al grupo de recursos que creamos, damos clic en "Create", buscamos la sección de "Azure Bot" y creamos le damos clic en "Create". ![alt text](images/image-a36.png)
+6. Especificamos el nombre del Bot (podemos usar el siguiente formato "bot-dev-"+"iniciales"+"-aoaighcopilotws"), seleccionamos el Data REsidency = "Global, Pricing Tier Standard, Type of App Single Tenant y el Creation Type: Create new Microsoft App ID; damos clic en "Review + Create"; posteriormente en el botón de "Create". ![alt text](images/image-a37.png) ![alt text](images/image-a38.png)
+7. Una vez que se creo el Bot Service, necesitamos configurar el messaging endpoint, para esto agregamos la url del web app anteriormente creada mas el posfijo de "/api/messages"; damos clic en "Apply". ![alt text](images/image-a39.png)
+8. Por ultimo necesitamos habilitar el proceso de despligue continuo en Github para que publique directamente en el web app, como primer paso habilitamos el SCM Basic Auth Publishing y FTP Basic Auth Publishing en la sección de configuración, damo clic en "Save" ![alt text](images/image-a40.png)
+9. Posteriormente en la sección de "Overview" seleccionamos "Download publish profile". ![alt text](images/image-a41.png)
+10. Abrimos el archivo en Notepad o el editor de texto de tu predilección, copiamos el contenido; vamos a Github en el repositorio al que le hicimos fork, vamos a la seccion de Settings y despues a "Secrets and Variables" -> Actions ![alt text](images/image-a42.png)
+11. Creamos un nuevo secreto dando clic en el boton de "New repository secret" ![alt text](images/image-a43.png)
+12. Especificamos el nombre= "AZUREAPPSERVICE_PUBLISHPROFILE" y el Secret con el valor que copiamos anteriormente.![alt text](images/image-a44.png)
+
+Con esto ya tenemos configurado el despliegue continuo de nuestro Bot en Azure Bot Service. Vamos a codificar nuestro Bot.
 
 ### Construcción del Bot
 
