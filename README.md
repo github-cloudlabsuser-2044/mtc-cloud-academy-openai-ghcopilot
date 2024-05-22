@@ -141,7 +141,7 @@ Para poder usar Azure OpenAI necesitamos traer nuestros datos a Azure OpenAI, en
 7. En la siguiente pantalla nos solicita que indiquemos el tipo de Búsqueda, solo esta disponible la opción "Keyword", posteriormente seleccionamos el tamaño del Chunk; dejamos la opción por defecto.Damos clic en "Next" ![alt text](images/image-a25.png)
 8. Nos muestra un resumen de la configuración, damos clic en el botón de "Save and close" ![alt text](images/image-a26.png)
 9. Ahora podemos ver que esta ejecutándose el proceso de ingestion e indexación, esperamos a que terminen ambos procesos ![alt text](images/image-a27.png)
-10. Una vez que termino el proceso de ingestion e indexación, podemos ver que el modelo de ChatGPT ya esta listo para responder con la información que se encuentra en el archivo que subimos. ![alt text](images/image-a28.png).![alt text](image.png)
+10. Una vez que termino el proceso de ingestion e indexación, podemos ver que el modelo de ChatGPT ya esta listo para responder con la información que se encuentra en el archivo que subimos. ![alt text](images/image-a28.png).
 
 ### Creación de Azure Bot Service
 
