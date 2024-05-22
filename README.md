@@ -169,31 +169,31 @@ Con esto ya tenemos configurado el despliegue continuo de nuestro Bot en Azure B
 Una vez abierto nuestro Codespace en el navegador, en esta sección necesitamos platicar de las siguientes funcionalidades de GH Copilot: 
 
 - Vemos que es muy fácil integrarlo en nuestro IDE (Visual Studio Code):
-  1. Vamos al pane lateral izquierdo y damos clic en el menu de extensiones ó con el shortcut de "Ctrl+Shift+X" ![alt text](images/image-5.png)
+  1. Vamos al panel lateral izquierdo y damos clic en el menu de extensiones ó con el shortcut de "Ctrl+Shift+X" ![alt text](images/image-5.png)
   2. En la barra de Búsqueda buscamos "GitHub Copilot", tenemos disponible la ayuda disponible inline con GH Copilot y con un asistente Virtual con Github Copilot y esta al alcance de un clic en el botón instalar. ![alt text](images/image-6.png)
 - Una vez explicado lo anterior vamos al panel lateral izquierdo y le damos clic en el menu de "Chat"; ahí vemos que tenemos una interfaz conversacional donde podemos poner nuestros prompts. ![alt text](images/image-7.png)
 
 Procedemos a construir nuestro bot:
 
-1. En el asistente de GH Copilot escribimos el siguiente prompt: "Como desarrollador, necesito crear una aplicación web de tipo bot en .Net Core llamada BuceoBot, donde utilice el template de EchoBot del Bot Framework de Microsoft". Si la Respuesta es similar a la siguiente imagen le damos clic en botón de thumbs up para indicar que lo que nos recomendó fue acertado (con eso le indicamos a GH Copilot que nos dio una respuesta correcta y en futuras interacciones no dará respuestas mas adecuadas). ![alt text](images/image-8.png)
+1. En el asistente de GH Copilot escribimos el siguiente prompt: "Como desarrollador, necesito crear una aplicación web de tipo bot en .Net Core llamada YourBot, donde utilice el template de EchoBot del Bot Framework de Microsoft". Si la Respuesta es similar a la siguiente imagen le damos clic en botón de thumbs up para indicar que lo que nos recomendó fue acertado (con eso le indicamos a GH Copilot que nos dio una respuesta correcta y en futuras interacciones no dará respuestas mas adecuadas). ![alt text](images/image-8.png)
 2. Es importante recalcar que la estructura del prompt anterior es del tipo "Zero Prompt", sin embargo al usar técnicas como especificar cual es nuestro rol, expresar una acción y detallar un contexto nos permite tener respuestas mas certeras para usarlas en el desarrollo de nuestra solución. Ahora necesitamos aplicar lo que nos recomienda. Para esto vamos a instalar las platillas , abrimos una terminal en el Codespace de la siguiente forma: Menu Contextual -> Terminal -> New Terminal ![alt text](images/image-9.png)
 3. Posteriormente posicionamos el cursor en la primera recomendación y seleccionamos la opción de "Insert in Terminal", ejecutamos el comando. ![alt text](images/image99.png)
    Puede ser que falle nuestro comando.
    ![alt text](images/image-199.png)
 4. En dado caso que falle, una de las ventajas que tenemos es que podemos usar GH copilot, tiene la posibilidad de usar comandos para poder obtener recomendaciones para resolver un error en la terminal, en la ventana de copilot escribimos el prompt "@terminal /explain #terminalLastCommand" donde con la @ especificamos el area de trabajo que en nuestro caso es la consola, / usamos el comando para que GH Copilot nos explique porque esta mal el comando anterior y con el # especificamos que comando que en nuestro caso es el ultimo. lo cual nos ayuda a no cambiar de contexto y seguir trabajando en el IDE. ![alt text](images/image-299.png)
 5. Aplicamos las recomendaciones e intentamos ejecutar el comando anterior y vemos que esta mal de nuevo. ![alt text](images/image-399.png)
-6. Es posible que ya no se encuentre este paquete por lo que vamos a cambiar nuestro prompt anterior. Necesitamos usar el template de EchoBot, por lo que necesitamos ejecutar el siguiente prompt "Como desarrollador, necesito crear una aplicación web de tipo bot en .Net Core llamada BuceoBot, donde utilice el template de EchoBot del Bot Framework de Microsoft. El template de EchoBot para C# lo necesito instalar con el comando dotnet -i, usando dotnet new -i Microsoft.Bot.Framework.CSharp.EchoBot"![alt text](images/image-499.png)
+6. Es posible que ya no se encuentre este paquete por lo que vamos a cambiar nuestro prompt anterior. Necesitamos usar el template de EchoBot, por lo que necesitamos ejecutar el siguiente prompt "Como desarrollador, necesito crear una aplicación web de tipo bot en .Net Core llamada YourBot, donde utilice el template de EchoBot del Bot Framework de Microsoft. El template de EchoBot para C# lo necesito instalar con el comando dotnet -i, usando dotnet new -i Microsoft.Bot.Framework.CSharp.EchoBot"![alt text](images/image-499.png)
 7. Seguimos las recomendaciones ejecutamos el comando ![alt text](images/image-599.png)
 8. Creamos nuestro proyecto ejecutando el comando de creación recomendado. ![alt text](images/image-699.png)
 9. Nos cambiamos de repositorio y ejecutamos el proyecto. ![alt text](images/image-799.png)
 10. Si estamos en el browser, nos va a preguntar si queremos abrirlo en el browser, le damos clic ![alt text](images/image-899.png)
 11. El api de nuestro bot esta lista. ![alt text](images/image-999.png)
-12. Ahora ya tenemos el cascaron de nuestro bot, podemos usar una funcionalidad para realizar un renombre en el archivo de BuceoBot/Bots/EchoBots.cs. Vamos entender como esta conformada esta clase. Abrimos el archivo ![alt text](images/image-1099.png)
+12. Ahora ya tenemos el cascaron de nuestro bot, podemos usar una funcionalidad para realizar un renombre en el archivo de YourBot/Bots/EchoBots.cs. Vamos entender como esta conformada esta clase. Abrimos el archivo ![alt text](images/image-1099.png)
 13. Puede resultar confuso si no tengo el conocimiento de como funciona un bot, por tal motivo vamos a pedirle a GH Copilot para que nos explique. Abrimos el GH Copilot Chat y con el archivo abierto escribimos @workspace /explain. ![alt text](images/image-1199.png)
 14. GH Copilot nos explica el contenido de nuestro Bot ![alt text](images/image-1299.png)
-15. Pedimos a Copilot que nos ayude a renombrar EchoBot por BuceoBot, para esto escribimos el siguiente prompt "Renombrar EchoBot.cs por BuceoBot" ![alt text](images/image-1399.png)
+15. Pedimos a Copilot que nos ayude a renombrar EchoBot por YourBot, para esto escribimos el siguiente prompt "Renombrar EchoBot.cs por YourBot" ![alt text](images/image-1399.png)
 16. Seguimos el procedimiento para realizar el rename de EchoBot.cs ![alt text](images/image-1499.png)
-17. Cambiamos donde diga EchoBot por BuceoBot presionamos Ctrl+Shipt+H y reemplazamos ![alt text](images/image-1599.png)  
+17. Cambiamos donde diga EchoBot por YourBot presionamos Ctrl+Shipt+H y reemplazamos ![alt text](images/image-1599.png)  
 18. Volvemos a ejecutar el bot, abrimos a la terminal y ejecutamos el siguiente comando: "dotnet run" ![alt text](images/image-1699.png)
 19. Nuestro bot esta listo para ser Desplegado en Azure ![alt text](images/image-1799.png)
 20. Ya existe un recurso de Azure Bot configurado, en la sección de Configuración encontraremos el Microsoft App ID y el App Tenant ID,  es necesario ir al archivo appsettings.json y los reemplazamos e indicamos la siguiente información:
@@ -216,8 +216,8 @@ Procedemos a hacer inteligente nuestro bot
 
 Para este escenario necesitamos agregar inteligencia a nuestro bot, por lo que nos auxiliaremos de Github Copilot para usar Azure OpenAI para alcanzar este objetivo. 
 
-1. Donde le vamos a agregar inteligencia es en el archivo de Bots/BuceoBot.cs, por lo que procedemos a abrirlo
-2. En GH Copilot Chat indicamos el siguiente prompt : "Como instalar la librería de Azure y Azure.AI.OpenAI", y seguimos el procedimiento indicado en la consola ( es importante que estemos en la carpeta del proyecto usando el comando "cd BuceoBot") ![alt text](images/image-2799.png)
+1. Donde le vamos a agregar inteligencia es en el archivo de Bots/YourBot.cs, por lo que procedemos a abrirlo
+2. En GH Copilot Chat indicamos el siguiente prompt : "Como instalar la librería de Azure y Azure.AI.OpenAI", y seguimos el procedimiento indicado en la consola ( es importante que estemos en la carpeta del proyecto usando el comando "cd YourBot") ![alt text](images/image-2799.png)
 3. Vamos a usar el encadenamiento de prompts para mejorar la eficiencia de las recomendaciones del Gh Copilot in lines en los archivos que estamos trabajando.  En la linea 12 damos un salto de linea y ponemos un comentario con el siguiente prompt : "Generar 2 propiedades para la llave y el endpoint de Azure OpenAI, con un valor predeterminado"
 4. Vamos al recurso de Azure OpenAI y buscamos Key 1 y endpoint en la sección "Keys and EndPoint",  procedemos a reemplazar los siguientes valores en el código:
    - Key de Azure OpenAI = "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
