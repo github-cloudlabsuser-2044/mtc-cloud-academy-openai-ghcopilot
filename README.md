@@ -8,10 +8,22 @@ Cada sección tiene como objetivo principal mostrar una o varias característica
 
 Lo ideal es crear un Fork de este repositorio y utilizar el ambiente de Azure proporcionado en la sesión.
 
-
 A continuación se muestra el contenido de la guía recomendada del workshop:
-
-[[toc]]
+- [MTC Cloud Academy - Desarrollo de aplicaciones Inteligentes con GitHub Copilot y CodeSpaces](#mtc-cloud-academy---desarrollo-de-aplicaciones-inteligentes-con-github-copilot-y-codespaces)
+  - [Escenarios de Negocio aplicables](#escenarios-de-negocio-aplicables)
+  - [Prerequisitos](#prerequisitos)
+  - [Paso a paso](#paso-a-paso)
+    - [Habilitación de Azure Open AI , Servicios de búsqueda y Storage Account en Azure](#habilitación-de-azure-open-ai--servicios-de-búsqueda-y-storage-account-en-azure)
+      - [A. Creación de Grupo de Recursos](#a-creación-de-grupo-de-recursos)
+      - [B. Creación de Azure Storage Account](#b-creación-de-azure-storage-account)
+      - [C. Creación de Azure Cognitive Search](#c-creación-de-azure-cognitive-search)
+      - [D. Creación de Azure Open AI](#d-creación-de-azure-open-ai)
+      - [Creación del Despliegue de ChatGPT](#creación-del-despliegue-de-chatgpt)
+      - [Trae tus datos a Azure OpenAI](#trae-tus-datos-a-azure-openai)
+    - [Creación de Azure Bot Service](#creación-de-azure-bot-service)
+    - [Construcción del Bot](#construcción-del-bot)
+    - [Adición de inteligencia artificial generativa usando el SDK del  Azure Open AI](#adición-de-inteligencia-artificial-generativa-usando-el-sdk-del--azure-open-ai)
+    - [Integración del bot con Microsoft Teams](#integración-del-bot-con-microsoft-teams)
 
 ## Escenarios de Negocio aplicables
 
