@@ -159,6 +159,8 @@ Azure Bot Service es un servicio de Azure que permite a los desarrolladores crea
 10. Abrimos el archivo en Notepad o el editor de texto de tu predilección, copiamos el contenido; vamos a Github en el repositorio al que le hicimos fork, vamos a la sección de Settings y después a "Secrets and Variables" -> Actions ![alt text](images/image-a42.png)
 11. Creamos un nuevo secreto dando clic en el botón de "New repository secret" ![alt text](images/image-a43.png)
 12. Especificamos el nombre= "AZUREAPPSERVICE_PUBLISHPROFILE" y el Secret con el valor que copiamos anteriormente.![alt text](images/image-a44.png)
+13. Agregamos otro secreto llamado AZUREWEBAPP_NAME con el valor del nombre del web app que creamos. ![alt text](images/image-a45.png)
+14. Agregamos un ultimo secreto llamado PROJECT_NAME con el nombre de nuestro proyecto, que para efectos prácticos puede ser "YourBot". ![alt text](images/image-a46.png) ![alt text](image.png)
 
 Con esto ya tenemos configurado el despliegue continuo de nuestro Bot en Azure Bot Service. Vamos a codificar nuestro Bot.
 
