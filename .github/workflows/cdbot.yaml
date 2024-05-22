@@ -27,7 +27,6 @@ jobs:
         - name: Deploy to Azure Web App
           uses: azure/webapps-deploy@v2
           with:
-            app-name: '${{secrets.PROJECT_NAME}}'
-            slot-name: 'production'
+            app-name: '${{secrets.PROJECT_NAME}}'            
             publish-profile: ${{ secrets.AzureAppService_PublishProfile }}
             package: './${{secrets.PROJECT_NAME}}/output'
