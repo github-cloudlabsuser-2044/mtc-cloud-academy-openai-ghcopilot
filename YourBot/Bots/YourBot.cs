@@ -8,6 +8,7 @@ using Microsoft.Bot.Schema;
 
 namespace YourBot.Bots
 {
+    
     public class YourBot : ActivityHandler
     {
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
