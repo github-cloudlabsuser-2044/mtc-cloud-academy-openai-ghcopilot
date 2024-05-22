@@ -46,7 +46,7 @@ Estos bots se pueden personalizar y escalar según las necesidades específicas 
 En la guía estamos planteando un bot relacionado con Buceo, pero es recomendable que el escenario lo relaciones con la industria de tu escenario de negocio. 
 
 Buscamos habilitar el siguiente escenario técnico:
-"aqui va la imagen"
+"aquí va la imagen"
 
 A continuación se muestra el contenido de la guía recomendada dela Demo
 
@@ -80,7 +80,7 @@ Para poder ejecutar la demo es necesario seguir los siguientes pasos:
 
 Dentro del escenario tenemos un Bot inteligente que usara Azure OpenAI para agregar inteligencia artificial generativa, este Bot se podrá integrar con microsoft teams y con un portal web.  
 
-### Habilitacion de Azure Open AI , Servicios de busqueda y Storage Account en Azure
+### Habilitación de Azure Open AI , Servicios de búsqueda y Storage Account en Azure
 
 En esta sección vamos a habilitar los servicios de Azure necesarios para el desarrollo de la solución. Para esto es necesario seguir los siguiente pasos:
 
@@ -100,7 +100,7 @@ El Storage Account de Azure es un servicio de almacenamiento en la nube seguro y
 
 #### C. Creación de Azure Cognitive Search
 
-Azure Cognitive Search es un servicio de búsqueda en la nube completamente administrado que proporciona la capacidad de agregar una búsqueda enriquecida a las aplicaciónes web y móviles. En nuestro escenario nos permitirá buscar información en los archivos que almacenamos en el Storage Account y proporcionar un mecanismo efectivo de busqueda a Azure OpenAI. Para crear un servicio de búsqueda en Azure, sigue estos pasos:
+Azure Cognitive Search es un servicio de búsqueda en la nube completamente administrado que proporciona la capacidad de agregar una búsqueda enriquecida a las aplicaciones web y móviles. En nuestro escenario nos permitirá buscar información en los archivos que almacenamos en el Storage Account y proporcionar un mecanismo efectivo de búsqueda a Azure OpenAI. Para crear un servicio de búsqueda en Azure, sigue estos pasos:
 
 1. En el portal de Azure, vamos al grupo de recursos que creamos, damos clic en "Create", buscamos la sección de "Azure AI Search" y creamos un servicio de búsqueda. ![alt text](images/image-a9.png)
 2. Especificamos el nombre del servicio de búsqueda (podemos usar el siguiente formato "aais-dev-"+"iniciales"+"-aoaighcopilotws", seleccionamos la región, y el pricing tier (Standard funciona bien para nuestro escenario) y damos clic en "Review + Create"; posteriormente en el botón de "Create". ![alt text](images/image-a10.png) ![alt text](images/image-a11.png)
@@ -178,7 +178,7 @@ Procedemos a construir nuestro bot:
 3. Posteriormente posicionamos el cursor en la primera recomendación y seleccionamos la opción de "Insert in Terminal", ejecutamos el comando. ![alt text](images/image99.png)
    Puede ser que falle nuestro comando.
    ![alt text](images/image-199.png)
-4. En dado caso que falle, una de las ventajas que tenemos es que podemos usar GH copilot, tiene la posibilidad de usar comandos para poder obtener recomendaciones para resolver un error en la terminal, en la ventana de copilot escribimos el promtp "@terminal /explain #terminalLastCommand" donde con la @ especificamos el area de trabajo que en nuestro caso es la consola, / usamos el comando para que GH Copilot nos explique porque esta mal el comando anterior y con el # especificamos que comando que en nuestro caso es el ultimo. lo cual nos ayuda a no cambiar de contexto y seguir trabajando en el IDE. ![alt text](images/image-299.png)
+4. En dado caso que falle, una de las ventajas que tenemos es que podemos usar GH copilot, tiene la posibilidad de usar comandos para poder obtener recomendaciones para resolver un error en la terminal, en la ventana de copilot escribimos el prompt "@terminal /explain #terminalLastCommand" donde con la @ especificamos el area de trabajo que en nuestro caso es la consola, / usamos el comando para que GH Copilot nos explique porque esta mal el comando anterior y con el # especificamos que comando que en nuestro caso es el ultimo. lo cual nos ayuda a no cambiar de contexto y seguir trabajando en el IDE. ![alt text](images/image-299.png)
 5. Aplicamos las recomendaciones e intentamos ejecutar el comando anterior y vemos que esta mal de nuevo. ![alt text](images/image-399.png)
 6. Es posible que ya no se encuentre este paquete por lo que vamos a cambiar nuestro prompt anterior. Necesitamos usar el template de EchoBot, por lo que necesitamos ejecutar el siguiente prompt "Como desarrollador, necesito crear una aplicación web de tipo bot en .Net Core llamada BuceoBot, donde utilice el template de EchoBot del Bot Framework de Microsoft. El template de EchoBot para C# lo necesito instalar con el comando dotnet -i, usando dotnet new -i Microsoft.Bot.Framework.CSharp.EchoBot"![alt text](images/image-499.png)
 7. Seguimos las recomendaciones ejecutamos el comando ![alt text](images/image-599.png)
@@ -223,7 +223,7 @@ Para este escenario necesitamos agregar inteligencia a nuestro bot, por lo que n
 5. Necesitamos generar un método para invocar a OpenAI por lo que ponemos un comentario en la linea 16 con el siguiente prompt : "#Generar un método asíncrono que regrese un string y que reciba como parámetro un texto, el método esta vacío" ![alt text](images/image-2999.png)
 6. Damos un salto de linea en la linea 19 y escribimos el siguiente prompt como comentario para generar la llave para acceder al cliente de Azure Open AI: "#generar un AzureKeyCredential con la llave de OpenAI"![alt text](images/image-3099.png)
 7. Damos un salto de linea y escribimos el siguiente prompt como comentario = " #inicializar el cliente de OpenAIClient con el endpoint de OpenAI y el AzureKeyCredential" ![alt text](images/image-3199.png)
-8. Ingresamos el siguiente comentario para inicializar las opciónes de nuestro cliente "Inicializar las opciónes de ChatCompletionsOptions de forma inline indicando el parámetro de DeploymentName de tipo gpt-35-turbo y Messages recibido de la variable text de tipo ChatRequestUserMessage. Siguiendo el formato new Class { Property = Value }" ![alt text](images/image-3299.png)
+8. Ingresamos el siguiente comentario para inicializar las opciones de nuestro cliente "Inicializar las opciones de ChatCompletionsOptions de forma inline indicando el parámetro de DeploymentName de tipo gpt-35-turbo y Messages recibido de la variable text de tipo ChatRequestUserMessage. Siguiendo el formato new Class { Property = Value }" ![alt text](images/image-3299.png)
 9. Si existe algún error pueden usar el siguiente código:
             "var options = new ChatCompletionsOptions
             {

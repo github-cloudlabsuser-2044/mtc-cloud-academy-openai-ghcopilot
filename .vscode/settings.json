@@ -1,4 +1,20 @@
 {
     "cSpell.enabled": true,
-    "cSpell.language": "en,es"
+    "cSpell.language": "en,es",
+    "cSpell.ignoreWords": [
+        "AZUREAPPSERVICE",
+        "Codespaces",
+        "PUBLISHPROFILE",
+        "aais",
+        "aoai",
+        "aoaighcopilotws",
+        "appsettings",
+        "codespace",
+        "contentindex",
+        "dotnet",
+        "indexación",
+        "replytext",
+        "sadev",
+        "tualias"
+    ]
 }
