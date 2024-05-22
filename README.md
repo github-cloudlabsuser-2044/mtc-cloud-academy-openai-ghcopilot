@@ -18,8 +18,8 @@ A continuación se muestra el contenido de la guía recomendada del workshop:
       - [B. Creación de Azure Storage Account](#b-creación-de-azure-storage-account)
       - [C. Creación de Azure Cognitive Search](#c-creación-de-azure-cognitive-search)
       - [D. Creación de Azure Open AI](#d-creación-de-azure-open-ai)
-      - [Creación del Despliegue de ChatGPT](#creación-del-despliegue-de-chatgpt)
-      - [Trae tus datos a Azure OpenAI](#trae-tus-datos-a-azure-openai)
+      - [E. Creación del Despliegue de ChatGPT](#e-creación-del-despliegue-de-chatgpt)
+      - [F. Trae tus datos a Azure OpenAI](#f-trae-tus-datos-a-azure-openai)
     - [Creación de Azure Bot Service](#creación-de-azure-bot-service)
     - [Construcción del Bot](#construcción-del-bot)
     - [Adición de inteligencia artificial generativa usando el SDK del  Azure Open AI](#adición-de-inteligencia-artificial-generativa-usando-el-sdk-del--azure-open-ai)
@@ -118,7 +118,7 @@ Azure OpenAI es un servicio de inteligencia artificial generativa que permite a 
 1. En el portal de Azure, vamos al grupo de recursos que creamos, damos clic en "Create", buscamos la sección de "Azure OpenAI" y creamos un servicio de Azure OpenAI. ![alt text](images/image-a12.png)
 2. Especificamos el nombre del servicio de Azure OpenAI (podemos usar el siguiente formato "aoai-dev-"+"iniciales"+"-aoaighcopilotws", seleccionamos la región, y el pricing tier (S0 funciona bien para nuestro escenario) y damos clic en "Next" hasta llegar a la sección de "Review + submit"; posteriormente en el botón de "Create". ![alt text](images/image-a13.png) ![alt text](images/image-a14.png)
 
-#### Creación del Despliegue de ChatGPT
+#### E. Creación del Despliegue de ChatGPT
 
 Los Despliegues proveen endpoints a los modelos base de Azure OpenAI, en especial buscamos configurar el modelo de LLM (Large Language Model) que usaremos para hacer nuestro Bot Inteligente. En esta sección vamos a crear un despliegue de ChatGPT en Azure OpenAI, para esto es necesario seguir los siguientes pasos:
 
@@ -127,7 +127,7 @@ Los Despliegues proveen endpoints a los modelos base de Azure OpenAI, en especia
 3. Damos clic en "Create New Deployment" ![alt text](images/image-a17.png)
 4. Especificamos el nombre del despliegue, podemos usar el siguiente formato "gpt-35-turbo", Importante  seleccionamos el modelo "gpt-35-turbo", modelo a escoger es el 0301; damos clic en "Create". ![alt text](images/image-a29.png)
 
-#### Trae tus datos a Azure OpenAI
+#### F. Trae tus datos a Azure OpenAI
 
 Para poder usar Azure OpenAI necesitamos traer nuestros datos a Azure OpenAI, en este caso vamos a especificar en el deployment que acabamos de configurar de donde obtendrá los datos con lo que nos ayudará de un archivo de texto que contiene información sobre Buceo. Para traer los datos a Azure OpenAI, sigue estos pasos:
 
